@@ -22,31 +22,37 @@ function ega_plugin_settings_page() {
     }
     ?>
     <div class="wrap">
-        <h2>Easy Google Analytics Integration Settings</h2>
-        <form method="post" action="options.php">
-            <?php settings_fields('ega_plugin_settings_group'); ?>
-            <?php do_settings_sections('ega_plugin_settings_group'); ?>
-            <table class="form-table">
-                <tr valign="top">
-                    <th scope="row">GA4 Measurement ID</th>
-                    <td><input type="text" name="ega_ga4_measurement_id" value="<?php echo esc_attr(get_option('ega_ga4_measurement_id')); ?>" /></td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row">Anonymize IP Addresses</th>
-                    <td><input type="checkbox" name="ega_anonymize_ip" value="1" <?php checked(get_option('ega_anonymize_ip'), 1); ?> /></td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row">GDPR Compliance</th>
-                    <td><input type="checkbox" name="ega_gdpr_compliance" value="1" <?php checked(get_option('ega_gdpr_compliance'), 1); ?> /></td>
-                </tr>
-                <tr valign="top">
-                    <th scope="row">Use GA4</th>
-                    <td><input type="checkbox" name="ega_use_ga4" value="1" <?php checked(get_option('ega_use_ga4', 1), 1); ?> /></td>
-                </tr>
-            </table>
-            <?php submit_button(); ?>
-        </form>
-    </div>
+    <h2>Easy Google Analytics Integration Settings</h2>
+    <form method="post" action="options.php">
+        <?php settings_fields('ega_plugin_settings_group'); ?>
+        <?php do_settings_sections('ega_plugin_settings_group'); ?>
+        <table class="form-table">
+            <tr valign="top">
+                <th scope="row">GA4 Measurement ID</th>
+                <td>
+                    <input type="text" name="ega_ga4_measurement_id" value="<?php echo esc_attr(get_option('ega_ga4_measurement_id')); ?>" />
+                    <p class="description">Enter your Google Analytics 4 Measurement ID (e.g., G-XXXXXXXXXX).</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">Anonymize IP Addresses</th>
+                <td>
+                    <input type="checkbox" name="ega_anonymize_ip" value="1" <?php checked(get_option('ega_anonymize_ip', 0), 1); ?> />
+                    <p class="description">Enable this option to anonymize visitors' IP addresses in Google Analytics.</p>
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">GDPR Compliance</th>
+                <td>
+                    <input type="checkbox" name="ega_gdpr_compliance" value="1" <?php checked(get_option('ega_gdpr_compliance', 0), 1); ?> />
+                    <p class="description">Enable this option to include a JavaScript function for users to opt-out of Google Analytics tracking.</p>
+                </td>
+            </tr>
+        </table>
+        <?php submit_button(); ?>
+    </form>
+</div>
+
     <?php
 }
 
