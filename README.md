@@ -14,11 +14,11 @@ Easily add Google Analytics 4 (GA4) tracking code to your WordPress site with th
 1. Download the plugin's ZIP file and extract it.
 2. Upload the extracted folder to the `/wp-content/plugins/` directory of your WordPress installation.
 3. Activate the plugin through the 'Plugins' menu in WordPress.
-4. Go to the 'Settings' > 'Easy GA' menu to configure the plugin.
+4. Go to the 'Settings' > 'Easy GA4' menu to configure the plugin.
 
 ## Configuration
 
-1. Visit the plugin's settings page ('Settings' > 'Easy GA') in your WordPress admin area.
+1. Visit the plugin's settings page ('Settings' > 'Easy GA4') in your WordPress admin area.
 2. Enter your GA4 Measurement ID.
 3. (Optional) Check the 'Anonymize IP Addresses' option if you want to anonymize visitors' IP addresses.
 4. (Optional) Check the 'GDPR Compliance' option if you want to add an opt-out function for Google Analytics tracking.
