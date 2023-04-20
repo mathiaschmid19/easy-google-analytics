@@ -97,5 +97,3 @@ function ega_plugin_insert_tracking_code() {
         }
     }
 }
-
-  
